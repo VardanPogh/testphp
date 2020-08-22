@@ -4,7 +4,7 @@
  * BASEURL
  */
 
-define('BASEURL', 'http://mvclesson.loc');
+define('BASEURL', 'https://testbyvardan.herokuapp.com/');
 
 /**
  * DATABASE Connection
