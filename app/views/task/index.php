@@ -25,8 +25,8 @@
                         <th scope="row"><?= ++$key; ?></th>
                         <td><?= $value['name']; ?></td>
                         <td><?= $value['email']; ?></td>
-                        <td><?= $value['text']; ?></td>
-                        <td><?= $value['status'] == 0 ? 'Review' : 'Done'; ?></td>
+                        <td> <?php if($value['edited'] == 1){ ?><span style="color:orange">(Edited)</span><?php } ?>  <?= $value['text']; ?></td>
+                        <td><?= $value['status'] == 0 ? 'Review' : 'Done' ?></td>
                         <?php if ($_SESSION['login'] == 'admin') { ?>
                             <td>
                                 <a href="<?= BASEURL; ?>/task/edit/<?= $value['id']; ?>"
